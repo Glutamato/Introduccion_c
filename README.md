@@ -1,11 +1,8 @@
 # Introducción a C++
 <div align="center">
     <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" width="450" height="200" >
-<<<<<<< HEAD
 </div>
-=======
 
->>>>>>> 1774e94fe05d0d2efab8914c2f60711b65413e92
 ---
 
   -[Ventajas de usar C++](#ventajas-de-usar-c)
