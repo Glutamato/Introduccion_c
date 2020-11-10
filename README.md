@@ -6,6 +6,7 @@
 ---
 
   -[Ventajas de usar C++](#ventajas-de-usar-c)
+  
   -[¿Qué son las librerías STD?](#qué-son-las-librerías-std)
 
 ---
