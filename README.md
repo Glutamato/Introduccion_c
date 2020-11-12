@@ -34,7 +34,7 @@ Es utilizado para aplicaciones que requieren de una optimización de recursos y 
 
 La librerías son pedazos de código que otras personas han escrito con anterioridad que se implementan para que más usuarios puedan acceder a las funciones que tiene defininidas dentro de ellas.
 
-Tenemos un conjunto de [librerias estándar](https://www.ecured.cu/Librer%C3%ADa_Est%C3%A1ndar_C%2B%2B) como por ejemplo, *\<stdio.h>* *\<iostream>*, entre muchas otras.
+Tenemos un conjunto de [librerias estándar](https://www.ecured.cu/Librer%C3%ADa_Est%C3%A1ndar_C%2B%2B) como por ejemplo, `<stdio.h>`, `<iostream>`, entre muchas otras.
 
 Un programa básico de C++ tiene la siguiente estructura
 
@@ -42,6 +42,7 @@ Un programa básico de C++ tiene la siguiente estructura
 #include <iostream>
 
 using namespace std;
+//El comando de arriba es lo que nos permite usar la intrucicon cout
 
 int main()
 {
@@ -49,7 +50,8 @@ int main()
     return 0;
 }
 ```
-Donde podemos observar que primero, incluimos las librerias que contienen las instrucciones que vamos a utilizar para despúes, pasar a agregar todo nuestro codigo dentro de un bloque llamado `main()` el cual delimitamos con llaves `{}` para delimitar donde empieza y donde termina.
+Podemos observar que primero, incluimos las librerías que contienen las instrucciones que vamos a utilizar para despúes, pasar a agregar todo nuestro código dentro de un bloque llamado `main()` el cual delimitamos con llaves `{}` para delimitar donde empieza y donde termina.
+
 Este bloque `main()` lo que hace es indicar donde se encuentra la porción principal de nuestro programa, que será la parte que queremos que se ejecute en la consola.
 
 ---
@@ -107,7 +109,7 @@ Una variable es un **espacio reservado** en memoria, definido por un *tipo de da
 
 * Declaramos que tipo de variable es (int, ,float, char, bool, etc).
 * Le asignamos un nombre.
-* Como buena practica es bueno inicializar la variable con algún valor, ya que puede interferir con los valores que suelen tenes asignados por la memoria por defecto.
+* Como buena practica es bueno inicializar la variable con algún valor, ya que puede interferir con los valores que suelen tener asignados por defecto en la memoria.
 
 ```c++
 #include <iostream>
@@ -168,7 +170,8 @@ int main()
 }
 ```
 Donde al ejecutarlo en mi maquina se obtiene la siguiente dirección de memoria: **0x6dfee8** que es la dirección en memoria de la variable `Direccion1`.
-Y también al imprimir la variable `Direccion1` que podemos ver un `3` y no un `3509` ya que fue modificada usando el apuntador `*Apuntador = 3`.
+
+Y también, al imprimir la variable `Direccion1` visualizamos un `3` y no un `3509` ya que fue modificada usando el apuntador con la intrucción: `*Apuntador = 3;`.
 
 
 <div align="center">
