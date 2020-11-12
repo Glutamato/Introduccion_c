@@ -4,10 +4,13 @@ using namespace std;
 
 int main()
 {
-    cout << 10<< endl;//INT
-    cout << 3.1416f<< endl;//FLOAT
-    cout << true << endl;//BOOL
-    cout << 'Caracter'<< endl;//CHAR
-    cout << "Tambien podemos desplegar un mensaje asi"<< endl;
+
+    int num = 12;
+    float flot = 3.1416;
+    char carac = 'abc';
+    bool bin = false;
+    bool bin2 = true;
+    cout << carac << endl;
+    cout << CualquierOtraVariable << endl;
     return 0;
 }
