@@ -4,13 +4,10 @@ using namespace std;
 
 int main()
 {
+    int Direccion=3509;
+    int* Apuntador;
+    Apuntador = &Direccion;
+    cout << Apuntador << endl;
 
-    int num = 12;
-    float flot = 3.1416;
-    char carac = 'abc';
-    bool bin = false;
-    bool bin2 = true;
-    cout << carac << endl;
-    cout << CualquierOtraVariable << endl;
     return 0;
 }

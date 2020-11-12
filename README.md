@@ -14,13 +14,17 @@
 
   - [Ventajas de usar C++](#ventajas-de-usar-c)
   - [¿Qué son las librerías STD?](#qué-son-las-librerías-std)
-
+  - [Módulo 1: Manejo de memoria ](#módulo-1-manejo-de-memoria)
+    - [Tipos de datos](#tipos-de-datos) 
+    - [Almacenando variables en memoria](#almacenando-variables-en-memoria)
+    - [Operadores](#operadores)
+    - [Apuntadores](#apuntadores)
 ---
 
 ## Ventajas de usar C++
-  * Veloz : Manejo de memoria sin maquina virtual o recolector de basura (garbage collector).
+  * Veloz : Manejo de memoria sin maquina virtual o recolector de basura [garbage collector](https://ed.team/blog/que-es-el-garbage-collector-en-programacion).
   * Complejo: Una gran cantidad de librerías y nuevos paradigmas de programación, constantemente en crecimiento.
-  * Orientado a programación orientada a objetos.
+  * Orientado a [programación orientada a objetos](https://www.youtube.com/watch?v=I848HdWjLMo&t=1s).
  
 Es utilizado para aplicaciones que requieren de una optimización de recursos y manejor de memoria como prioridad, al mismo tiempo de ser escalable, modular y distribuido en varias plataformas.
 
@@ -44,8 +48,11 @@ int main()
     return 0;
 }
 ```
+Donde podemos observar que primero, incluimos las librerias que contienen las instrucciones que vamos a utilizar para despúes, pasar a agregar todo nuestro codigo dentro de un bloque llamado `main()` el cual delimitamos con llaves `{}` para delimitar donde empieza y donde termina.
+Este bloque `main()` lo que hace es indicar donde se encuentra la porción principal de nuestro programa, que será la parte que queremos que se ejecute en la consola.
+
 ---
-## Módulo 1: Manejo de memoria
+### Módulo 1: Manejo de memoria
 
 *Una memoria:*
 * Codifica
@@ -54,16 +61,16 @@ int main()
 
 Los datos de la computadora suelen almacenarse especialmente en el disco duro y en la memoria RAM.
 
-### Tipos de datos 
+## Tipos de datos 
 
 Es una clasificación que le damos a la información para hacer saber al compilador cómo va a ser escrita e interpretada.
 
-*Existen los tipos de datos:*
-* Int: enteros
-* Float: flotantes
-* Bool: booleanos
-* Chars: caracteres 
-* Vacío: void
+**Existen los tipos de datos:**
+* *Int*: enteros
+* *Float*: flotantes
+* *Bool*: booleanos
+* *Chars*: caracteres 
+* *Vacío*: void
 * [Entre muchos otros](https://en.wikibooks.org/wiki/C%2B%2B_Programming/Programming_Languages/C%2B%2B/Code/Statements/Variables/Type/Data_Types).
 
 Cada tipo de dato, tienen una longitud máxima de bits que puede almacenar.
@@ -82,15 +89,16 @@ int main()
     cout << true << endl;//BOOL
     cout << 'Caracter'<< endl;//CHAR 
     cout << "Tambien podemos desplegar un mensaje asi"<< endl;
+    //El comando endl da un salto de linea
     return 0;
 }
 ```
 
-### Almacenando variables en memoria
+## Almacenando variables en memoria
 
 Una variable es un **espacio reservado** en memoria, definido por un *tipo de dato* y un *nombre asignado*, en el cual se puede guardar un valor y se puede modificar.
 
-*Para guardar una variable:*
+**Para guardar una variable:**
 
 * Declaramos que tipo de variable es (int, ,float, char, bool, etc).
 * Le asignamos un nombre.
@@ -112,7 +120,7 @@ int main()
 }
 ```
 
-### Operadores
+## Operadores
 
 **¿Qué son los operadores?**
 Son símbolos que le permiten al programador hacer manipulaciones generalmente aritméticas o lógicas usando uno o más datos.
@@ -125,3 +133,30 @@ Son símbolos que le permiten al programador hacer manipulaciones generalmente a
 * Módulo:Este es el residuo de una división \% 
 * Asignación: \=
 
+## Apuntadores
+
+Los apuntadores son variables que guardan una **dirección de memoria**.
+La referencia a esta dirección de memoria puede ser usada para modificar el valor dentro de ella.
+
+**Operadores para apuntadores**
+* Operador de apuntador: **\***
+* Obtener la dirección de memoria específica de la variable: *&*
+
+Por ejemplo, con el siguiente código podemos implementar de una manera sencilla un apuntador y obtener la dirección en memoria de una variable:
+```c++
+#include <iostream>
+using namespace std;
+int main()
+{
+    int Direccion1=3509;
+    int* Apuntador; //Creamos una variable de tipo apuntador o puntero
+    Apuntador = &Direccion1; //Obten la dirección en memoria de la variable Direccion1
+    cout << Apuntador << endl; //Imprime esa Direccion de memoria
+    return 0;
+}
+```
+Donde al ejecutarlo en mi maquina se obtiene la siguiente dirección de memoria: **0x6dfee8**
+
+<div align="center">
+    <img src="https://codingornot.com/wp-content/uploads/2017/02/destacada-apuntadores-temp01.png" width="500" height="350" >
+</div>
