@@ -19,6 +19,7 @@
     - [Almacenando variables en memoria](#almacenando-variables-en-memoria)
     - [Operadores](#operadores)
     - [Apuntadores](#apuntadores)
+  - [Módulo 2: Entradas de datos y funciones](#módulo-2-entradas-de-datos-y-funciones) 
 ---
 
 ## Ventajas de usar C++
@@ -52,7 +53,7 @@ Donde podemos observar que primero, incluimos las librerias que contienen las in
 Este bloque `main()` lo que hace es indicar donde se encuentra la porción principal de nuestro programa, que será la parte que queremos que se ejecute en la consola.
 
 ---
-### Módulo 1: Manejo de memoria
+## Módulo 1: Manejo de memoria
 
 *Una memoria:*
 * Codifica
@@ -61,7 +62,9 @@ Este bloque `main()` lo que hace es indicar donde se encuentra la porción princ
 
 Los datos de la computadora suelen almacenarse especialmente en el disco duro y en la memoria RAM.
 
-## Tipos de datos 
+---
+
+### Tipos de datos 
 
 Es una clasificación que le damos a la información para hacer saber al compilador cómo va a ser escrita e interpretada.
 
@@ -94,7 +97,9 @@ int main()
 }
 ```
 
-## Almacenando variables en memoria
+---
+
+### Almacenando variables en memoria
 
 Una variable es un **espacio reservado** en memoria, definido por un *tipo de dato* y un *nombre asignado*, en el cual se puede guardar un valor y se puede modificar.
 
@@ -120,7 +125,9 @@ int main()
 }
 ```
 
-## Operadores
+---
+
+### Operadores
 
 **¿Qué son los operadores?**
 Son símbolos que le permiten al programador hacer manipulaciones generalmente aritméticas o lógicas usando uno o más datos.
@@ -133,7 +140,9 @@ Son símbolos que le permiten al programador hacer manipulaciones generalmente a
 * Módulo:Este es el residuo de una división \% 
 * Asignación: \=
 
-## Apuntadores
+---
+
+### Apuntadores
 
 Los apuntadores son variables que guardan una **dirección de memoria**.
 La referencia a esta dirección de memoria puede ser usada para modificar el valor dentro de ella.
@@ -148,15 +157,45 @@ Por ejemplo, con el siguiente código podemos implementar de una manera sencilla
 using namespace std;
 int main()
 {
-    int Direccion1=3509;
+    int Direccion1=3509;//Iniciamos con un valor random dentor de la variable
     int* Apuntador; //Creamos una variable de tipo apuntador o puntero
     Apuntador = &Direccion1; //Obten la dirección en memoria de la variable Direccion1
+    *Apuntador = 3 //Modifica la variable usando su puntero la variable usando su puntero 
+    //Recordemo que los punteros permiten obtenerla dirección o modificar el valor dentro de ella
     cout << Apuntador << endl; //Imprime esa Direccion de memoria
+    cout << Direccion1 << endl;//Imprime variable modificada
     return 0;
 }
 ```
-Donde al ejecutarlo en mi maquina se obtiene la siguiente dirección de memoria: **0x6dfee8**
+Donde al ejecutarlo en mi maquina se obtiene la siguiente dirección de memoria: **0x6dfee8** que es la dirección en memoria de la variable `Direccion1`.
+Y también al imprimir la variable `Direccion1` que podemos ver un `3` y no un `3509` ya que fue modificada usando el apuntador `*Apuntador = 3`.
+
 
 <div align="center">
     <img src="https://codingornot.com/wp-content/uploads/2017/02/destacada-apuntadores-temp01.png" width="500" height="350" >
 </div>
+
+---
+
+Un pequeño y muy sencillo ejemplo de una implementación para calcular areas 
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int radio = 10;
+    int pi = 3.1416;
+    float areaCirculo = radio*radio*pi;
+    float areaEsfera = 4*pi*radio*radio;
+    cout << areaCirculo << endl;
+    cout << areaEsfera << endl;
+
+    return 0;
+}
+```
+
+---
+
+## Módulo 2: Entradas de datos y funciones
